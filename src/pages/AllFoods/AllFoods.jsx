@@ -57,7 +57,7 @@ const AllFoods = () => {
   }
 
   return (
-    <div className="min-h-screen py-10">
+    <div className="min-h-screen py-10 mt10">
       <div className="text-center">
         <h1 className="text-4xl font-semibold text-blue-500">All Foods</h1>
         <p className="text-lg text-gray-600 mt-2">
