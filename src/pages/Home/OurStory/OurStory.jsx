@@ -22,7 +22,6 @@ const OurStory = () => {
               more than a story—it's a testament to what we can achieve
               together.
             </p>
-            <button className="btn btn-error text-white">Read More</button>
           </div>
         </div>
       </div>
