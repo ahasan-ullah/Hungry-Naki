@@ -11,12 +11,12 @@ const Banner = () => {
   return (
     <div>
       {/* Banner */}
-      <div className="hero h-[350px] md;h-[320px]"
+      <div className="hero h-[350px] md:h-[420px]"
       style={{
         backgroundImage: `url(${banner4})`,
       }}>
       <div className="hero-overlay bg-opacity-60"></div>
-        <div className="hero-content text-neutral-content text-center">
+        <div className="hero-content text-neutral-content text-center mt-10">
           <div className="max-w-md">
           <h1 className="mb-5 text-5xl font-bold">Hungry Naki!</h1>
             <p className="mb-5">

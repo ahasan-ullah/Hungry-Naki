@@ -25,12 +25,12 @@ const Navbar = () => {
 
 
   const links=<>
-    <li><NavLink to={'/'}>Home</NavLink></li>
-    <li><NavLink to={'/all-foods'}>All Foods</NavLink></li>
-    <li><NavLink to={'/gallery'}>Gallery</NavLink></li>
+    <li className="bg-white rounded-xl"><NavLink to={'/'}>Home</NavLink></li>
+    <li className="bg-white rounded-xl"><NavLink to={'/all-foods'}>All Foods</NavLink></li>
+    <li className="bg-white rounded-xl"><NavLink to={'/gallery'}>Gallery</NavLink></li>
   </>
   return (
-    <div className="navbar bg-base-100">
+    <div className="navbar bg-neutral fixed top-0 z-10 shadow-sm max-w-7xl mx-auto">
   <div className="navbar-start">
     <div className="dropdown">
       <div tabIndex={0} role="button" className="btn btn-ghost lg:hidden">
@@ -55,7 +55,7 @@ const Navbar = () => {
         }
       </ul>
     </div>
-    <a className="text-2xl font-bold">Hungry Naki!</a>
+    <a className="md:text-2xl font-bold text-white">Hungry Naki!</a>
   </div>
   <div className="navbar-center hidden lg:flex">
     <ul className="menu menu-horizontal px-1 space-x-3">
