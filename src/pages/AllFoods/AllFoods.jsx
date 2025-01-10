@@ -56,8 +56,15 @@ const AllFoods = () => {
     setCurrentPage(0);
   }
 
+  const handleSort=()=>{
+    const sortedFoods = [...filteredFoods].sort(
+      (a, b) => parseFloat(a.price) - parseFloat(b.price)
+    );
+    setFilteredFoods(sortedFoods);
+  }
+
   return (
-    <div className="min-h-screen py-10 mt10">
+    <div className="min-h-screen py-10 mt-16">
       <div className="text-center">
         <h1 className="text-4xl font-semibold text-blue-500">All Foods</h1>
         <p className="text-lg text-gray-600 mt-2">
@@ -66,7 +73,7 @@ const AllFoods = () => {
       </div>
 
       {/* Search Input */}
-      <div className="mt-10 text-center">
+      <div className="mt-10 text-center space-x-5">
         <input
           type="text"
           defaultValue={search}
@@ -74,7 +81,7 @@ const AllFoods = () => {
           className="p-2 w-72 border rounded-lg shadow-lg mt-4"
           placeholder="Search for food items..."
         />
-        <MagnifyingGlassIcon className="h-6 w-6 inline-block ml-2 text-blue-500" />
+        <button onClick={handleSort} className="btn btn-error">Sort</button>
       </div>
 
       {/* Food Cards */}
