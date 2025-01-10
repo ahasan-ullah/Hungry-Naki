@@ -34,7 +34,7 @@ const MyOrder = () => {
     });
   };
   return (
-    <div className="overflow-x-auto my-5 max-w-3xl mx-auto">
+    <div className="overflow-x-auto my-5 max-w-3xl mx-auto mt-16">
       <h1 className="text-2xl font-bold text-center my-5">My Orders</h1>
       <table className="table">
         {/* head */}

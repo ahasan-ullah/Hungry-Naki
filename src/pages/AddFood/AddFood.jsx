@@ -62,7 +62,7 @@ const AddFood = () => {
   };
 
   return (
-    <div className="flex items-center justify-center min-h-screen p-4">
+    <div className="flex items-center justify-center min-h-screen p-4 mt-16">
       <form onSubmit={handleSubmit} className="w-full max-w-xl rounded-lg p-6">
         <h2 className="text-3xl font-bold mb-6 text-center">Add Food</h2>
 

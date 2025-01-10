@@ -64,7 +64,7 @@ const MyFood = () => {
     setUpdatedFood({});
   };
   return (
-    <div className="overflow-x-auto my-5">
+    <div className="overflow-x-auto my-5 mt-16">
       <h1 className="text-2xl font-bold text-center my-5">My Food</h1>
       <table className="table max-w-5xl mx-auto">
         {/* head */}
