@@ -26,9 +26,9 @@ const Gallery = () => {
   };
 
   return (
-    <div className="min-h-screen flex flex-col justify-center items-center mt-5">
+    <div className="min-h-screen flex flex-col justify-center items-center mt-20">
       {/* Page Title */}
-      <h1 className="text-5xl font-bold mb-10">
+      <h1 className="text-5xl font-bold mb-5">
         Welcome to the Gallery
       </h1>
 
