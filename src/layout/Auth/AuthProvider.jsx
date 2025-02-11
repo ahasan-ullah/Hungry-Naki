@@ -51,6 +51,7 @@ const AuthProvider = ({children}) => {
     logout,
     loginUser,
     googleLogin,
+    setLoading,
   }
 
   // observer

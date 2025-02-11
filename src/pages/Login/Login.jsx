@@ -5,7 +5,7 @@ import { useContext } from 'react';
 import AuthContext from '../../layout/Auth/AuthContext';
 import Swal from 'sweetalert2';
 const Login = () => {
-  const {setUser,loginUser,googleLogin}=useContext(AuthContext);
+  const {setUser,loginUser,googleLogin,setLoading}=useContext(AuthContext);
 
   //login wiht email and password
   const handleLogin = (e) => {
@@ -22,6 +22,7 @@ const Login = () => {
       })
     })
     .catch(()=>{
+      setLoading(false);
       Swal.fire({
         title: "Login failed",
         icon: "error"
