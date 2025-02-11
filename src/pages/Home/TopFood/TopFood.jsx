@@ -1,18 +1,30 @@
 import axios from "axios";
 import { useEffect, useState } from "react";
 import { Link } from "react-router-dom";
+import LoadingPage from "../../LoadingPage/LoadingPage";
 
 const TopFood = () => {
   const [foods, setFoods] = useState([]);
+  const [loading,setLoading]=useState(true);
   // geting all products
   useEffect(() => {
     axios
       .get("https://hungry-naki-server-swart.vercel.app/foods")
       .then((res) => {
         setFoods(res.data.slice(0, 8));
+        setLoading(false);
       })
       .catch((err) => console.error(err));
   }, []);
+
+  if(loading){
+    return(
+      <div className="flex items-center justify-center my-10">
+        <span className="loading loading-spinner loading-lg"></span>
+      </div>
+    )
+  }
+  
   return (
     <div className="mb-10">
       <h3 className="text-3xl font-bold text-center">Top Food</h3>
