@@ -36,8 +36,9 @@ const Navbar = () => {
       </li>
     </>
   );
+  const newLocal = "navbar bg-neutral fixed top-0 z-10 shadow-sm";
   return (
-    <div className="navbar bg-neutral fixed top-0 z-10 shadow-sm max-w-7xl mx-auto">
+    <div className={newLocal}>
       <div className="navbar-start">
         <div className="dropdown">
           <div tabIndex={0} role="button" className="btn mr-2 lg:hidden">

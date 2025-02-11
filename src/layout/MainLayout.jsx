@@ -4,11 +4,13 @@ import Footer from "../components/shared/Footer/Footer";
 
 const MainLayout = () => {
   return (
-    <div className="max-w-7xl mx-auto">
+    <div>
       {/* navbar */}
       <Navbar></Navbar>
       {/* dynamic page */}
-      <Outlet></Outlet>
+      <div className="max-w-7xl mx-auto">
+        <Outlet></Outlet>
+      </div>
       {/* footer */}
       <Footer></Footer>
     </div>
