@@ -200,7 +200,7 @@ const AddFood = () => {
         {/* Add Item Button */}
         <button
           type="submit"
-          className="w-full py-2 px-4 bg-blue-600 text-white font-bold rounded-md hover:bg-blue-700 focus:ring focus:ring-blue-200 focus:outline-none"
+          className="btn btn-neutral w-full"
         >
           Add Item
         </button>
