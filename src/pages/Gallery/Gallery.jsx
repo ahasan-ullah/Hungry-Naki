@@ -26,11 +26,11 @@ const Gallery = () => {
   };
 
   return (
-    <div className="min-h-screen flex flex-col justify-center items-center mt-20">
+    <div className="min-h-screen flex flex-col mt-20 p-10">
       {/* Page Title */}
-      <h1 className="text-5xl font-bold mb-5">
-        Welcome to the Gallery
-      </h1>
+      <div className="text-center mb-10">
+        <h1 className="text-4xl font-semibold text-blue-500">Welcome to the Gallery</h1>
+      </div>
 
       {/* Gallery Section */}
       <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-4 p-4 max-w-5xl mx-auto">

@@ -93,7 +93,7 @@ const AllFoods = () => {
           className="p-2 w-72 border rounded-lg shadow-lg mt-4"
           placeholder="Search for food items..."
         />
-        <button onClick={handleSort} className="btn btn-error">
+        <button onClick={handleSort} className="btn btn-error text-white">
           Sort
         </button>
       </div>
