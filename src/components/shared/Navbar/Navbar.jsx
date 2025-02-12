@@ -77,7 +77,7 @@ const Navbar = () => {
                 role="button"
                 className="border border-blue-500 rounded-full"
               >
-                <img className="w-12" src={user.photoURL} alt="user image" />
+                <img className="w-12 rounded-full" src={user.photoURL} alt="user image" />
               </div>
               <ul
                 tabIndex={0}
