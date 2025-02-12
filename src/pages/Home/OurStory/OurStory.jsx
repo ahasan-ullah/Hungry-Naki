@@ -1,7 +1,7 @@
 import storyImage from "../../../assets/our-story.jpg";
 const OurStory = () => {
   return (
-    <div className="my-5">
+    <div className="mb-10">
       <h1 className="text-3xl font-bold text-center mb-5">Our Story</h1>
       <div className="hero">
         <div className="hero-content flex-col lg:flex-row">

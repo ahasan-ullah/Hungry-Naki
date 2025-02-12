@@ -16,7 +16,7 @@ const Reviews = () => {
       .then((data) => setReviews(data));
   }, []);
   return (
-    <section className="my-20">
+    <section className="mb-10">
       <p className="text-center text-blue-400">Testimonials</p>
       <h2 className="text-center text-4xl font-bold">What Our Clients Says</h2>
       <Swiper navigation={true} modules={[Navigation]} className="mySwiper">
