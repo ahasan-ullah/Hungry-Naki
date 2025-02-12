@@ -63,7 +63,7 @@ const TopFood = () => {
           </div>
         ))}
         <div>
-          <Link to={'/all-foods'} className="btn btn-error">View All</Link>
+          <Link to={'/all-foods'} className="btn btn-error text-white">View All</Link>
         </div>
       </div>
     </div>
