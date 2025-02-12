@@ -2,14 +2,15 @@ import React, { useState, useEffect } from "react";
 import { Link } from "react-router-dom";
 import axios from "axios";
 import { MagnifyingGlassIcon } from "@heroicons/react/24/outline";
+import LoadingPage from "../LoadingPage/LoadingPage";
 const AllFoods = () => {
   const [foods, setFoods] = useState([]);
   const [filteredFoods, setFilteredFoods] = useState([]);
-  const [loading,setLoading]=useState(true);
+  const [loading, setLoading] = useState(true);
   const [search, setSearch] = useState("");
   const [totalCount, setTotalCount] = useState(0);
   const [itemsPerPage, setItemsPerPage] = useState(10);
-  const [currentPage,setCurrentPage]=useState(0);
+  const [currentPage, setCurrentPage] = useState(0);
 
   const numberOfPages = Math.ceil(totalCount / itemsPerPage);
   const pages = [...Array(numberOfPages).keys()];
@@ -18,7 +19,10 @@ const AllFoods = () => {
   useEffect(() => {
     axios
       .get("https://hungry-naki-server-swart.vercel.app/productsCount")
-      .then((res) => setTotalCount(res.data.count));
+      .then((res) => {
+        setTotalCount(res.data.count);
+        setLoading(false);
+      });
   }, []);
 
   // geting all products
@@ -27,17 +31,20 @@ const AllFoods = () => {
       .get("https://hungry-naki-server-swart.vercel.app/foods")
       .then((res) => {
         setFoods(res.data);
+        setLoading(false);
       })
       .catch((err) => console.error(err));
   }, []);
 
-  useEffect(()=>{
-    fetch(`https://hungry-naki-server-swart.vercel.app/foods?page=${currentPage}&size=${itemsPerPage}`)
-    .then(res=>res.json())
-    .then(data=>{
-      setFilteredFoods(data);
-    })
-  },[currentPage,setItemsPerPage])
+  useEffect(() => {
+    fetch(
+      `https://hungry-naki-server-swart.vercel.app/foods?page=${currentPage}&size=${itemsPerPage}`
+    )
+      .then((res) => res.json())
+      .then((data) => {
+        setFilteredFoods(data);
+      });
+  }, [currentPage, setItemsPerPage]);
 
   //search functionality
   const handleSearch = (e) => {
@@ -51,17 +58,21 @@ const AllFoods = () => {
   };
 
   //items per page
-  const handlePerPageItems=(e)=>{
-    const val=parseInt(e.target.value);
-    setItemsPerPage(val);
-    setCurrentPage(0);
-  }
+  // const handlePerPageItems = (e) => {
+  //   const val = parseInt(e.target.value);
+  //   setItemsPerPage(val);
+  //   setCurrentPage(0);
+  // };
 
-  const handleSort=()=>{
+  const handleSort = () => {
     const sortedFoods = [...filteredFoods].sort(
       (a, b) => parseFloat(a.price) - parseFloat(b.price)
     );
     setFilteredFoods(sortedFoods);
+  };
+
+  if (loading) {
+    return <LoadingPage></LoadingPage>;
   }
 
   return (
@@ -82,7 +93,9 @@ const AllFoods = () => {
           className="p-2 w-72 border rounded-lg shadow-lg mt-4"
           placeholder="Search for food items..."
         />
-        <button onClick={handleSort} className="btn btn-error">Sort</button>
+        <button onClick={handleSort} className="btn btn-error">
+          Sort
+        </button>
       </div>
 
       {/* Food Cards */}
@@ -123,18 +136,27 @@ const AllFoods = () => {
       {/* pagination */}
       <div className="flex items-center justify-center my-5 space-x-4">
         {pages.map((page) => (
-          <button onClick={()=>{setCurrentPage(page)}} key={page} className={currentPage===page ? 'btn btn-neutral' : 'btn'}>
+          <button
+            onClick={() => {
+              setCurrentPage(page);
+            }}
+            key={page}
+            className={currentPage === page ? "btn btn-neutral" : "btn"}
+          >
             {page + 1}
           </button>
         ))}
-        <select className="select select-bordered w-20" onChange={handlePerPageItems}>
+        {/* <select
+          className="select select-bordered w-20"
+          onChange={handlePerPageItems}
+        >
           <option disabled defaultValue={itemsPerPage}>
             {itemsPerPage}
           </option>
           <option>10</option>
           <option>20</option>
           <option>50</option>
-        </select>
+        </select> */}
       </div>
     </div>
   );
