@@ -87,7 +87,7 @@ const FoodDetails = () => {
             {/* Purchase Button */}
             <Link
               to={`/purchase/${id}`}
-              className="mt-6 inline-block w-full text-center py-3 px-6 bg-blue-600 text-white font-medium text-lg rounded-md hover:bg-blue-700 focus:ring focus:ring-blue-300"
+              className="btn btn-neutral w-full mt-6"
             >
               Purchase
             </Link>
