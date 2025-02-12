@@ -125,7 +125,7 @@ const AllFoods = () => {
             <div className="mt-4 flex justify-between items-center">
               <Link
                 to={`/food/${food._id}`}
-                className="text-white bg-blue-500 py-1 px-3 rounded-md hover:bg-blue-700 transition duration-300"
+                className="btn btn-outline"
               >
                 View Details
               </Link>
