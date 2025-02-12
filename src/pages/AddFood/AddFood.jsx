@@ -62,9 +62,11 @@ const AddFood = () => {
   };
 
   return (
-    <div className="flex items-center justify-center min-h-screen p-4 mt-16">
-      <form onSubmit={handleSubmit} className="w-full max-w-xl rounded-lg p-6">
-        <h2 className="text-3xl font-bold mb-6 text-center">Add Food</h2>
+    <div className="flex justify-center min-h-screen p-10 mt-20">
+      <form onSubmit={handleSubmit} className="w-full max-w-3xl rounded-lg p-6">
+      <div className="text-center">
+        <h1 className="text-4xl font-semibold text-blue-500 mb-10">Add Food</h1>
+      </div>
 
         {/* Food Name */}
         <div className="mb-4">
