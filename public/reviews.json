@@ -1,0 +1,50 @@
+[
+  {
+    "_id": "643030a1f5a7e52ce1e8fa80",
+    "name": "Olivia Carter",
+    "details": "The restaurant management system is fantastic! It has simplified order tracking, inventory management, and staff scheduling. Highly recommend it for restaurant owners!",
+    "rating": 5
+  },
+  {
+    "_id": "643030bcf5a7e52ce1e8fa81",
+    "name": "Liam Johnson",
+    "details": "The system covers all the basics well, but the reporting features could be more detailed. Also, integrating third-party delivery services is a bit tricky.",
+    "rating": 3
+  },
+  {
+    "_id": "643030d3f5a7e52ce1e8fa82",
+    "name": "Sophia Martinez",
+    "details": "This software has transformed how we manage our restaurant. The real-time order tracking and POS integration are game changers!",
+    "rating": 5
+  },
+  {
+    "_id": "643030eaf5a7e52ce1e8fa83",
+    "name": "Noah White",
+    "details": "Great features overall, but the user interface could be more intuitive. New staff members take some time to get used to it.",
+    "rating": 4
+  },
+  {
+    "_id": "64303101f5a7e52ce1e8fa84",
+    "name": "Isabella Scott",
+    "details": "The system has potential, but it crashes occasionally during peak hours. Needs better stability and bug fixes.",
+    "rating": 2
+  },
+  {
+    "_id": "64303117f5a7e52ce1e8fa85",
+    "name": "James Hall",
+    "details": "Love how easy it is to manage reservations and inventory. It integrates seamlessly with our online ordering system. Customer support is also very responsive.",
+    "rating": 5
+  },
+  {
+    "_id": "6430312df5a7e52ce1e8fa86",
+    "name": "Emily Adams",
+    "details": "The system is packed with features, but setting up the menu and pricing structure takes a long time. More tutorials would be helpful.",
+    "rating": 3
+  },
+  {
+    "_id": "64303144f5a7e52ce1e8fa87",
+    "name": "William Brooks",
+    "details": "The mobile app needs a lot of improvement, especially in syncing data with the main system. However, the desktop version is smooth and efficient.",
+    "rating": 4
+  }
+]
